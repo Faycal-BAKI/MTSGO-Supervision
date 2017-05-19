@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Carte interactive du campus</title>
+	<link rel="stylesheet" type="text/css" href="{% static "map.css" %}">
+</head>
+<body>
+	<div id="carte"><img src="{% static "map.jpg" %}"></div>
+	{% for spot in spots %}
+		<a href="http://127.0.0.1:8000/carte/">
+		<div style="
+		left:{{spot.centrex|add:"0"}}px;
+		top:{{spot.centrey|add:"0"}}px;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border: 5px solid black;">
+		</div>
+		</a>
+	{% endfor %}
+
+</body>
+</html>

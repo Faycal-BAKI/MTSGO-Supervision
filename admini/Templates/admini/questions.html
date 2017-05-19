@@ -1,0 +1,54 @@
+<h1>Les questions disponibles sont :</h1>
+<h1>{{json_data.answer1}}</h1>
+
+<table border="1" cellspacing="1" width="95%">
+
+<tr>
+        <th>id</th>
+
+       <th>Question</th>
+
+       <th>Réponse 1</th>
+
+       <th>Réponse 2</th>
+
+    <th>Réponse 3</th>
+
+    <th>Réponse 4</th>
+
+    <th>Bonne réponse</th>
+
+    <th>Niveau de difficulté</th>
+
+    <th>Sujet</th>
+
+    <th>Score</th>
+
+   </tr>
+
+
+    {% for l in json_data %}
+
+    <tr>
+        <td>  {{l.id}}   </td>
+        <td>  {{l.question}}   </td>
+         <td>  {{l.answer1}}   </td>
+         <td>  {{l.answer2}}   </td>
+         <td>  {{l.answer3}}   </td>
+         <td>  {{l.answer4}}   </td>
+         <td>  {{l.rightAnswer}}   </td>
+         <td>  {{l.difficulty}}   </td>
+         <td>  {{l.topic}}   </td>
+        <td>  {{l.score}}   </td>
+    </tr>
+
+    {% endfor %}
+
+
+    </table>
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<h1>Les statistiques actuelles sont :</h1>
+
+{% for l in json_data %}
+
+<em> Le nombre de question disponible actuellement est : {{l.fields.nbrQ}} </em>
+<br />
+<br />
+
+<em> Le nombre de joueurs inscrit est : {{l.fields.nbrJ}} </em>
+<br />
+<br />
+
+<em> Le nombre de joueurs connectés actuellement est : {{l.fields.nbrJConnected}} </em>
+<br />
+<br />
+
+   {% endfor %}
